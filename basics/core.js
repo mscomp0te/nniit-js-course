@@ -35,10 +35,7 @@ function sumTo(n)
 //Напишите функцию, считающую сумму чисел до заданного используя рекурсию
 function recSumTo(n) 
 {
-	if (n == 1)
-		return 1;
-	else
-		return (n + recSumTo(n-1));
+	return (n == 1) ? 1 : n + recSumTo(n-1)
 }
 
 //Напишите функцию, считающую факториал заданного числа
@@ -49,15 +46,13 @@ function factorial(n)
 	for (let i = 1; i < n + 1; i++)
 		F *= i;
 
-	return(S);
+	return (S);
 }
 
 //Напишите функцию, которая определяет, является ли число двойкой, возведенной в степень
 function isBinary(n) 
 {
-	if ((n & (n - 1)) == 0)
-		return (`${n} is binary!`);
-	else return (`${n} is not binary`);
+	return ((n & (n - 1)) == 0) ? (`${n} is binary!`) : (`${n} is not binary`)
 }
 
 //Напишите функцию, которая находит N-е число Фибоначчи
@@ -75,7 +70,6 @@ function fibonacci(n)
         }
         return numbers[2];
     }
-
     else if (n == 2)
         return numbers[2];
     else if (n == 1)
